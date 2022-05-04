@@ -1,0 +1,14 @@
+```{r}
+dessertData<-read.csv("Dessert Workflows.csv")
+```
+
+```{r}
+summary(dessertData)
+```
+
+```{r}
+colnames(dessertData)[1]<- "Dessert"
+library(ggplot2)
+ggplot(dessertData, aes(Dessert,Rating))+geom_bar(stat="identity")+theme_classic()
+```
+
